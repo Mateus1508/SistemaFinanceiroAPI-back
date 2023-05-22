@@ -6,12 +6,12 @@ namespace SistemaFinanceiroAPI.Repositories.Interfaces
     {
         Task<List<CategoryModel>> GetAll();
 
-        Task<CategoryModel> GetById(Guid id);
+        Task<CategoryModel> GetById(int id);
 
         Task<CategoryModel> AddCategory(CategoryModel category);
 
-        Task<CategoryModel> UpdateCategory(CategoryModel category, Guid id);
+        Task<CategoryModel> UpdateCategory(CategoryModel category, int id);
 
-        Task<bool> DeleteCategory(Guid id);
+        Task<bool> DeleteCategory(int id);
     }
 }

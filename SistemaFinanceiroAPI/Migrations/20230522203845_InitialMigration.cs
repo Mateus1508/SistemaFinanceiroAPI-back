@@ -15,7 +15,8 @@ namespace SistemaFinanceiroAPI.Migrations
                 name: "Category",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Expense = table.Column<bool>(type: "bit", nullable: false)
@@ -34,7 +35,7 @@ namespace SistemaFinanceiroAPI.Migrations
                     Value = table.Column<int>(type: "int", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
-                    CategoriesId = table.Column<int>(type: "uniqueidentifier", nullable: true)
+                    CategoriesId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
