@@ -33,7 +33,7 @@ namespace SistemaFinanceiroAPI.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Value = table.Column<int>(type: "int", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Date = table.Column<DateOnly>(type: "DateOnly2", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
                     CategoriesId = table.Column<int>(type: "int", nullable: true)
                 },

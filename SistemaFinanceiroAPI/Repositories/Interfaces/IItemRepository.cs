@@ -8,7 +8,7 @@ namespace SistemaFinanceiroAPI.Repositories.Interfaces
 
         Task<ItemModel> GetById(Guid id);
 
-        Task<ItemModel> GetByDate(DateTime date);
+        Task<ItemModel> GetByDate(DateOnly date);
 
         Task<ItemModel> AddItem(ItemModel item);
 

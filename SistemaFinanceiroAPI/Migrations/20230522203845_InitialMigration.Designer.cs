@@ -63,8 +63,8 @@ namespace SistemaFinanceiroAPI.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("DateOnly2");
 
                     b.Property<string>("Title")
                         .IsRequired()

@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SistemaFinanceiroAPI.Data;
 using SistemaFinanceiroAPI.Models;
 using SistemaFinanceiroAPI.Repositories.Interfaces;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SistemaFinanceiroAPI.Repositories
 {
@@ -28,7 +26,7 @@ namespace SistemaFinanceiroAPI.Repositories
             return await _dbContext.Item.ToListAsync();
         }
 
-        public async Task<ItemModel> GetByDate(DateTime date)
+        public async Task<ItemModel> GetByDate(DateOnly date)
         {
             return await _dbContext.Item.FirstOrDefaultAsync(x => x.Date == date);
         }
@@ -44,7 +42,7 @@ namespace SistemaFinanceiroAPI.Repositories
 
             if(itemById == null)
             {
-                throw new Exception("Usuário não encontrado!");
+                throw new Exception("Item não encontrado!");
             }
 
             itemById.Title = item.Title;
