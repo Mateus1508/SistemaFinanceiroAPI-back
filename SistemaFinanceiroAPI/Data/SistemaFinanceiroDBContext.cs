@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SistemaFinanceiroAPI.Data.Map;
 using SistemaFinanceiroAPI.Models;
 
 namespace SistemaFinanceiroAPI.Data
@@ -14,9 +13,6 @@ namespace SistemaFinanceiroAPI.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new ItemMap());
-            modelBuilder.ApplyConfiguration(new CategoryMap());
-
             base.OnModelCreating(modelBuilder);
         }
 

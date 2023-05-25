@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SistemaFinanceiroAPI.Data;
 using SistemaFinanceiroAPI.Models;
 using SistemaFinanceiroAPI.Repositories.Interfaces;
 
@@ -26,7 +27,7 @@ namespace SistemaFinanceiroAPI.Repositories
             return await _dbContext.Item.ToListAsync();
         }
 
-        public async Task<ItemModel> GetByDate(DateOnly date)
+        public async Task<ItemModel> GetByDate(DateTime date)
         {
             return await _dbContext.Item.FirstOrDefaultAsync(x => x.Date == date);
         }

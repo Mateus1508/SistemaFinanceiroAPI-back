@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Data\SistemaFinanceiroDBContext.cs" />
     <Compile Remove="Migrations\20230518223208_InitialMigration.cs" />
     <Compile Remove="Migrations\20230518223208_InitialMigration.Designer.cs" />
     <Compile Remove="Migrations\SistemaFinanceiroDBContextModelSnapshot.cs" />
@@ -29,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 

@@ -35,7 +35,7 @@ namespace SistemaFinanceiroAPI.Controllers
         }
         
         [HttpGet("{date}")]
-        public async Task<ActionResult<List<ItemModel>>> GetByDate([BindRequired] DateOnly date)
+        public async Task<ActionResult<List<ItemModel>>> GetByDate([BindRequired] DateTime date)
         {
             try
             {

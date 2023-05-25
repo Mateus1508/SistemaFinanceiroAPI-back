@@ -12,8 +12,8 @@ using SistemaFinanceiroAPI.Data;
 namespace SistemaFinanceiroAPI.Migrations
 {
     [DbContext(typeof(SistemaFinanceiroDBContext))]
-    [Migration("20230522203845_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20230525013104_DBContext")]
+    partial class DBContext
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,8 +43,7 @@ namespace SistemaFinanceiroAPI.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -63,13 +62,12 @@ namespace SistemaFinanceiroAPI.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<DateOnly>("Date")
-                        .HasColumnType("DateOnly2");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Value")
                         .HasColumnType("int");
