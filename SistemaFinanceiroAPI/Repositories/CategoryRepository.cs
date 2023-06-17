@@ -26,12 +26,12 @@ namespace SistemaFinanceiroAPI.Repositories
             return await _dbContext.Category.ToListAsync();
         }
 
-        public async Task<CategoryModel> GetById(Guid id)
+        public async Task<CategoryModel> GetById(int id)
         {
             return await _dbContext.Category.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<CategoryModel> UpdateCategory(CategoryModel category, Guid id)
+        public async Task<CategoryModel> UpdateCategory(CategoryModel category, int id)
         {
             CategoryModel categoryById = await GetById(id);
 
@@ -50,7 +50,7 @@ namespace SistemaFinanceiroAPI.Repositories
             return categoryById;
         }
         
-        public async Task<bool> DeleteCategory(Guid id)
+        public async Task<bool> DeleteCategory(int id)
         {
             CategoryModel categoryById = await GetById(id);
 

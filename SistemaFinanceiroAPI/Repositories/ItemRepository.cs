@@ -2,7 +2,6 @@
 using SistemaFinanceiroAPI.Data;
 using SistemaFinanceiroAPI.Models;
 using SistemaFinanceiroAPI.Repositories.Interfaces;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SistemaFinanceiroAPI.Repositories
 {
@@ -44,7 +43,7 @@ namespace SistemaFinanceiroAPI.Repositories
 
             if(itemById == null)
             {
-                throw new Exception("Usuário não encontrado!");
+                throw new Exception("Item não encontrado!");
             }
 
             itemById.Title = item.Title;
